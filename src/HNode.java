@@ -24,5 +24,7 @@ public abstract class HNode implements Comparable<HNode> {
     public int getFreq() {return this.freq;}
     public void setSymbol(char _symbol){this.symbol = _symbol;}
     public char getSymbol() {return this.symbol;}
+    public HNode getLeftChild() {return this.left_child;}
+    public HNode getRightChild() {return this.right_child;}
 
 }
