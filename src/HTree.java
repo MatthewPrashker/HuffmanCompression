@@ -1,6 +1,5 @@
 import java.util.PriorityQueue;
 import java.util.Map;
-import java.util.Collections;
 import java.util.HashMap;
 
 public class HTree {
@@ -19,7 +18,7 @@ public class HTree {
 
     private void buildTree() {
         PriorityQueue<HNode> pq = new PriorityQueue<HNode>();
-        for(Map.Entry<Character, Integer> entry : this.frequencies.getFreqTable().entrySet()) {
+        for(Map.Entry<Character, Double> entry : this.frequencies.getFreqTable().entrySet()) {
             pq.add(new HLeafNode(entry.getKey(), entry.getValue()));
         }
         while(pq.size() >= 2) {

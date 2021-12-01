@@ -1,5 +1,5 @@
 public abstract class HNode implements Comparable<HNode> {
-    private int freq;
+    private double freq;
     private char symbol;
     HNode left_child;
     HNode right_child;
@@ -17,11 +17,11 @@ public abstract class HNode implements Comparable<HNode> {
      */
     @Override
     public int compareTo(HNode other) {
-        return Integer.compare(this.freq, other.getFreq());
+        return Double.compare(this.freq, other.getFreq());
     }
 
-    public void setFreq(int _freq){this.freq = _freq;}
-    public int getFreq() {return this.freq;}
+    public void setFreq(double _freq){this.freq = _freq;}
+    public double getFreq() {return this.freq;}
     public void setSymbol(char _symbol){this.symbol = _symbol;}
     public char getSymbol() {return this.symbol;}
     public HNode getLeftChild() {return this.left_child;}
