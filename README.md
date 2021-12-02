@@ -15,7 +15,7 @@ Enter the String which you would like to encode in a text file in the directory 
 javac src/Driver.java
 java Driver path_to_freq_file path_to_text_file path_to_write_file
 ```
-and the binary string encoding the given string will be writted to the write file. To clean up the exectuables after running the program, simply
+and the binary string encoding the given string will be written to the write file. To clean up the exectuables after running the program, simply
 ```
 rm src/*.class
 ```
