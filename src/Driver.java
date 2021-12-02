@@ -9,6 +9,9 @@ public class Driver {
         System.out.println(HuffmanTree.encode("c"));
         System.out.println(HuffmanTree.encode("a"));
         System.out.println(HuffmanTree.decode("00"));
+        System.out.println(HuffmanTree.encode("abbbcb"));
+        HuffmanTree.encode("aaad");
+        System.out.println(HuffmanTree.decode(HuffmanTree.encode("abbbbcbbc")));
         frequencies.print();
     }
 }

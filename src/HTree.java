@@ -59,10 +59,16 @@ public class HTree {
      * Main function of the 
      * @param s The String we want to encode
      * @return A binary string representing the encoding of the String s
-     * @throws IllegalArgumentException if the String s contains a character which
-     * is not present in the frequency table
+     * @throws IllegalArgumentException if the String s is empty or
+     *  contains a character which is not present in the frequency table
      */
     public String encode(String s) throws IllegalArgumentException {
+        if(s.length() == 0) {
+            throw new IllegalArgumentException("The string to encode must be non-empty");
+        }
+        if(!encoding.containsKey(s.charAt(0))) {
+            throw new IllegalArgumentException("The string contains a character not in the alphabet");
+        }
         if(s.length() == 1) {
             return encoding.get(s.charAt(0));
         }
