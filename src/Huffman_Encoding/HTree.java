@@ -33,7 +33,7 @@ public class HTree {
         for(Map.Entry<Character, Double> entry : this.frequencies.getFreqTable().entrySet()) {
             pq.add(new HLeafNode(entry.getKey(), entry.getValue()));
         }
-        while(pq.size() >= 2) {
+        while(pq.size() > 1) {
             HNode left = pq.poll();
             HNode right = pq.poll();
             pq.add(left.merge(right));
@@ -57,7 +57,7 @@ public class HTree {
     }
 
     /**
-     * Main function of the 
+     * Main functionality of the HTree class which encodes a given string
      * @param s The String we want to encode
      * @return A binary string representing the encoding of the String s
      * @throws IllegalArgumentException if the String s is empty or
