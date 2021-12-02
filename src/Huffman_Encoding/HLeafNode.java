@@ -1,3 +1,5 @@
+package Huffman_Encoding;
+
 /**
  * Represents a Leaf Node in the Huffman Tree.
  * Stores a positive frequency and a non-null character

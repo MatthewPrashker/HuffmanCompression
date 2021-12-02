@@ -1,3 +1,4 @@
+package Huffman_Encoding;
 import java.util.PriorityQueue;
 import java.util.Map;
 import java.util.HashMap;

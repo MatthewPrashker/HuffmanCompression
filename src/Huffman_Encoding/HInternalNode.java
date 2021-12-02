@@ -1,3 +1,5 @@
+package Huffman_Encoding;
+
 /**
  * Simple Class representing an interior node in the Huffman Tree. 
  * An Internal Node must always have either left or right children non-null

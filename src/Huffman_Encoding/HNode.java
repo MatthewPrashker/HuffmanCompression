@@ -1,3 +1,4 @@
+package Huffman_Encoding;
 public abstract class HNode implements Comparable<HNode> {
     private double freq;
     private char symbol;
