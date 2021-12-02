@@ -1,9 +1,14 @@
 public abstract class HNode implements Comparable<HNode> {
     private double freq;
     private char symbol;
-    HNode left_child;
-    HNode right_child;
+    HNode left_child = null;
+    HNode right_child = null;
     
+    /**
+     * Merges a given Hnode with another Hnode by adding together frequencies
+     * @param other The HNode we want to merge with the calling node
+     * @return The resulting merged internal node
+     */
     public HInternalNode merge(HNode other) {
         HInternalNode merged_node = new HInternalNode(this.freq + other.freq);
         merged_node.left_child = this;

@@ -7,6 +7,8 @@ public class Driver {
         frequencies.addCharacter('c', 1);
         HTree HuffmanTree = new HTree(frequencies);
         System.out.println(HuffmanTree.encode("c"));
+        System.out.println(HuffmanTree.encode("a"));
+        System.out.println(HuffmanTree.decode("00"));
         frequencies.print();
     }
 }
