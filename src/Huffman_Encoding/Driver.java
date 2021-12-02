@@ -1,6 +1,8 @@
 package Huffman_Encoding;
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.io.File;  
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.FileNotFoundException; 
 import java.util.Scanner;
 
 public class Driver {
@@ -8,12 +10,14 @@ public class Driver {
     	String encoding_file = "";
     	String text_file = "";
     	String to_encode = "";
+    	String to_write = "";
     	FreqTable frequencies = new FreqTable();
     	try {
     		encoding_file = args[0];
     	    text_file = args[1];
+    	    to_write = args[2];
     	} catch(ArrayIndexOutOfBoundsException e) {
-    		System.out.println("Enter Frequency File followed by Text to Encode f");
+    		System.out.println("Enter Frequency File followed by File to encode followed by File to write to");
     		e.printStackTrace();
     	}
     	
@@ -43,9 +47,20 @@ public class Driver {
     		e.printStackTrace();
     	}
     	
-    	HTree HuffmanTree = new HTree(frequencies);
-    	System.out.println(HuffmanTree.encode(to_encode));
-    	System.out.println(HuffmanTree.decode(HuffmanTree.encode(to_encode)));
+    	try {
+    		File decode = new File(to_write);
+    		FileWriter writer = new FileWriter(decode);
+    		
+    		HTree HuffmanTree = new HTree(frequencies);
+    		writer.write(HuffmanTree.encode(to_encode));
+    		writer.flush();
+    	} catch(FileNotFoundException e) {
+    		System.out.println("Text file to write encoded binary not found");
+    		e.printStackTrace();
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    	}
+    	
     	
     	
     }
