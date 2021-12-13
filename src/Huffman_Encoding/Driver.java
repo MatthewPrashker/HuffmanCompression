@@ -1,4 +1,6 @@
 package Huffman_Encoding;
+//import Huffman_Encoding.FreqTable;
+//import Huffman_Encoding.HTree;
 import java.io.File;  
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,7 +9,6 @@ import java.util.Scanner;
 
 public class Driver {
     public static void main(String[] args) {
-    	HLeafNode h = new HLeafNode('d', 5);
     	String encoding_file = "";
     	String text_file = "";
     	String to_encode = "";
