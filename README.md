@@ -1,5 +1,5 @@
 # HuffmanCompression
-An Implementation of the Huffman Compression Scheme in Java
+An Implementation of the Huffman Compression Scheme in Java.
 
 To use this program, enter the relative frequencies of the characters in the alphabet under consideration in a text file
 in the directory ```data/freq_data```. This should be a text file with rows of the form "char: freq"
