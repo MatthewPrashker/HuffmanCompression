@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Driver {
     public static void main(String[] args) {
+    	HLeafNode h = new HLeafNode('d', 5);
     	String encoding_file = "";
     	String text_file = "";
     	String to_encode = "";

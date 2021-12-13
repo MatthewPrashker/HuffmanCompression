@@ -18,7 +18,9 @@ class Tree_Test {
         HTree HuffmanTree = new HTree(frequencies);
         //Characters with high frequency should be encoded to smaller strings
         //than characters with higher frequency. 
-        assert(HuffmanTree.encode("a").length() <= HuffmanTree.encode("c").length());
+        assert(HuffmanTree.encode("a").length() < HuffmanTree.encode("c").length());
+        //Most frequenct character should always have length 1
+        assertEquals(HuffmanTree.encode("a").length(), 1);
 	}
 	
 	@Test
@@ -30,6 +32,9 @@ class Tree_Test {
         HTree HuffmanTree = new HTree(frequencies);
         //Encoding and then decoding a string should be the identity
         assertEquals("acb", HuffmanTree.decode(HuffmanTree.encode("acb")));
+        
 	}
+	
+
 
 }
