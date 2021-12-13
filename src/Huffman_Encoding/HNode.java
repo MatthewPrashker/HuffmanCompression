@@ -26,11 +26,12 @@ public abstract class HNode implements Comparable<HNode> {
         return Double.compare(this.freq, other.getFreq());
     }
 
-    @Override
+    
     /**
      * To string method for a node which returns symbol 
      * followed by frequency
      */
+    @Override
     public String toString() {
     	if(this instanceof HInternalNode) {
     		return "(" + this.freq + ")";
